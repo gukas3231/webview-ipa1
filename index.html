@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rich Owl - Slot Prophet</title>
+  <link rel="stylesheet" href="style.css" />
+
+<style>
+#loading {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+#loadingSpinner {
+  width: 48px;
+  height: 48px;
+  border: 6px solid #ccc;
+  border-top: 6px solid #00ffc3;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 12px;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+#loadingText {
+  color: #ccc;
+  font-size: 16px;
+}
+
+#loadingWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="glow">Rich Owl</h1>
+
+    <div id="registerSection">
+      <h2>Регистрация</h2>
+      <input type="text" id="userId" placeholder="Введи свой ID" />
+      <input type="email" id="userEmail" placeholder="Введи свою почту" />
+      <button onclick="startApp()">Войти</button>
+    </div>
+
+    <div id="mainApp" style="display: none;">
+      <select id="slotSelect">
+        <option disabled selected>Выбери слот</option>
+      </select>
+      <button id="predictBtn">Узнать прогноз</button>
+      <div id="loadingWrapper">
+        <div id="loading">
+          <div id="loadingSpinner"></div>
+          <div id="loadingText">Получаем отчёт...</div>
+        </div>
+      </div>
+      <div id="loading" style="display: none;"><div class="spinner"></div></div>
+      <div id="result"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

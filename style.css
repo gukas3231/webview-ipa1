@@ -1,0 +1,91 @@
+
+body {
+  background-color: #0f0f0f;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  max-width: 500px;
+  padding: 20px;
+}
+
+h1.glow {
+  font-size: 3em;
+  margin-bottom: 20px;
+  animation: glow 3s infinite;
+}
+
+@keyframes glow {
+  0% { color: #ff0000; text-shadow: 0 0 10px #ff0000; }
+  25% { color: #00ff00; text-shadow: 0 0 10px #00ff00; }
+  50% { color: #00ffff; text-shadow: 0 0 10px #00ffff; }
+  75% { color: #ff00ff; text-shadow: 0 0 10px #ff00ff; }
+  100% { color: #ff0000; text-shadow: 0 0 10px #ff0000; }
+}
+
+input, select {
+  padding: 12px;
+  margin: 10px 5px;
+  font-size: 1em;
+  width: 80%;
+  max-width: 300px;
+  border-radius: 5px;
+  border: none;
+}
+
+select {
+  background-color: #222;
+  color: #fff;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(45deg, #ff0066, #ffcc00);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ffcc00;
+}
+
+#loading {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ccc;
+  border-top-color: #00ffc3;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #ffd700;
+}
